@@ -1,0 +1,41 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "funseco/music-plugin",
+    "description": "Funseco music — /music, song list, song jukebox, automatic song change, music widget",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^8.2",
+        "funseco/core": "@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Funseco\\Music\\": "src/"
+        }
+    },
+    "extra": {
+        "funseco": {
+            "id": "music",
+            "name": "Music",
+            "description": "music — /music, song list, song jukebox, automatic song change, music widget",
+            "provider": "Funseco\\Music\\MusicServiceProvider"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "require-dev": {
+        "funseco/admin-plugin": "@dev",
+        "mockery/mockery": "^1.6",
+        "orchestra/testbench": "^10.0",
+        "phpunit/phpunit": "^11.5.3"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Funseco\\Music\\Tests\\": "tests/"
+        }
+    }
+}
