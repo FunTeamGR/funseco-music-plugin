@@ -198,7 +198,7 @@ class MusicCommand implements Command, Described
             $text = $music->displayName($forced);
             if ($tags = $music->tagsOf($forced)) {
                 // tag text is the song author's: no $-styling of ours, a literal $ stays one
-                $text .= '{#music} : {#highlite}'.Text::literal(Text::stripColors($tags['title'])).'{#music} by {#highlite}'.Text::literal(Text::stripColors($tags['artist']));
+                $text .= '{#orange_dark} : {#highlite}'.Text::literal(Text::stripColors($tags['title'])).'{#orange_dark} by {#highlite}'.Text::literal(Text::stripColors($tags['artist']));
             }
         }
         Text::tell($player, Text::get('current', $text));
